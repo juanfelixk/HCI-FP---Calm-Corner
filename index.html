@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calm Corner</title>
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/e5693bed51.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="nav">
+        <img src="logo.png">
+        <b>Calm Corner</b>
+        <div class="nav-menu"><a href="index.html">Home</a></div>
+        <div class="nav-menu"><a href="#">Mood Tracker</a></div>
+        <div class="nav-menu"><a href="#">Weekly Challenges</a></div>
+        <div class="nav-menu"><a href="sharestory.html">Share a Story</a></div>
+        <i class="fa-solid fa-bars" id="bar-icon"></i>
+    </div>
+
+    <div class="dropdown" id="dropdown-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Mood Tracker</a></li>
+            <li><a href="#">Weekly Challenges</a></li>
+            <li><a href="sharestory.html">Share a Story</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const barIcon = document.getElementById("bar-icon");
+        const dropdownMenu = document.getElementById("dropdown-menu");
+        window.addEventListener("resize", function() {
+            if (window.innerWidth > 800) {
+                dropdownMenu.style.display = "none";
+                barIcon.classList.remove("fa-times");  
+                barIcon.classList.add("fa-bars");
+                barIcon.classList.remove("open");
+            }
+        });
+
+        barIcon.addEventListener("click", function() {
+            if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
+                dropdownMenu.style.display = "block";
+                barIcon.classList.remove("fa-bars");
+                barIcon.classList.add("fa-times");
+                barIcon.classList.add("open");
+            } else {
+                dropdownMenu.style.display = "none";
+                barIcon.classList.add("fa-bars");
+                barIcon.classList.remove("fa-times");
+                barIcon.classList.remove("open");
+            }
+        });
+    </script>
+
+    <div class="title">
+        <h1>Mental Health Screening</h1>
+        <h2>"Where Calm Meets Clarity"</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="test-type">
+        <h2><b>Take Our Free Mental Health Test</b></h2>
+        <a href="#"><button><b>DEPRESSION TEST</b></button></a>
+        <a href="#"><button><b>ANXIETY TEST</b></button></a>
+        <a href="#"><button><b>ADHD TEST</b></button></a>
+    </div>
+
+    <div class="challenge">
+        <h1>Explore Our Weekly Challenges</h1>
+        <h3>Find a challenge that supports your mental healing</h3>
+        <div class="left">
+            <a href="#"><button>
+                <i class="fa-solid fa-arrow-right"></i>
+                <div class="challenge-name">Challenge Name</div>
+                <p class="challenge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua.</p>
+            </button></a>
+            <a href="#"><button>
+                <i class="fa-solid fa-arrow-right"></i>
+                <div class="challenge-name">Challenge Name</div>
+                <p class="challenge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua.</p>
+            </button></a>
+            <a href="#"><button>
+                <i class="fa-solid fa-arrow-right"></i>
+                <div class="challenge-name">Challenge Name</div>
+                <p class="challenge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua.</p>
+            </button></a><br>
+        </div>
+        <div class="center">
+            <a href="#"><button>
+                <i class="fa-solid fa-arrow-right"></i>
+                <div class="challenge-name">Challenge Name</div>
+                <p class="challenge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua.</p>
+            </button></a>
+            <a href="#"><button>
+                <i class="fa-solid fa-arrow-right"></i>
+                <div class="challenge-name">Challenge Name</div>
+                <p class="challenge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua.</p>
+            </button></a>
+            <a href="#"><button>
+                <i class="fa-solid fa-arrow-right"></i>
+                <div class="challenge-name">Challenge Name</div>
+                <p class="challenge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua.</p>
+            </button></a><br>
+            <button class="learn-more">Explore more challenges</button>
+        </div>
+    </div>
+
+    <div class="why-us">
+        <h2>Why Calm Corner?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="container-for-two">
+        <div class="about">
+            <img src="logo.png">
+            <h2><b>About Calm Corner</b></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="share-story">
+            <h2>Share Your Story</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="center-link"><a href="sharestory.html" class="test"><b>SHARE YOUR STORY HERE</b></a></div>
+        </div>
+    </div>
+
+    <div class="explore-story">
+        <h2>Explore Similar Stories</h2>
+        <div class="slider">
+            <div class="slide active">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+                - Writer 1 -
+            </div>
+            <div class="slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+                - Writer 2 -
+            </div>
+            <div class="slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+                - Writer 3 -
+            </div>
+            <button class="prev" onclick="moveSlide(-1)"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="next" onclick="moveSlide(1)"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+        <script>
+            let slideIndex = 0;
+            function moveSlide(step) {
+                const slides = document.querySelectorAll('.slide');
+                slides[slideIndex].classList.remove('active');
+                slideIndex = (slideIndex + step + slides.length) % slides.length;
+                slides[slideIndex].classList.add('active');
+            }
+        </script>
+    </div>
+
+    <div class="footer">
+        <div class="subscribe">
+            <form action="https://formspree.io/f/mvgornez" method="POST">
+            <p>Subscribe to Our Newsletter</p>
+            <input type="email" name="Email" placeholder="Enter your email address" required="required">
+            <button type="submit">Subscribe</button></form>
+        </div>
+        <div class="copyright">
+            <i class="fa-regular fa-copyright"></i> Copyright 2024 | Calm Corner | A JGJ Company
+        </div>
+    </div>
+
+</body>
+</html>
