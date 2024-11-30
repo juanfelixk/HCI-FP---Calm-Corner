@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depression Test</title>
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="test.css">
+    <script src="https://kit.fontawesome.com/e5693bed51.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="nav">
+        <img src="logo.png">
+        <b>Calm Corner</b>
+        <div class="nav-menu"><a href="index.html">Home</a></div>
+        <div class="nav-menu"><a href="#">Mood Tracker</a></div>
+        <div class="nav-menu"><a href="challenge.html">Weekly Challenges</a></div>
+        <div class="nav-menu"><a href="sharestory.html">Share a Story</a></div>
+        <i class="fa-solid fa-bars" id="bar-icon"></i>
+    </div>
+
+    <div class="dropdown" id="dropdown-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Mood Tracker</a></li>
+            <li><a href="challenge.html">Weekly Challenges</a></li>
+            <li><a href="sharestory.html">Share a Story</a></li>
+        </ul>
+    </div>
+
+    <div class="title">
+        <span class="main-title">Depression Test</span>
+        <div class="block-container">
+            <div class="block">
+                <i class="fa-solid fa-1"></i><br>
+                <h3>Complete the Screening</h3>
+                <p>Learn more about your mental health and well-being.</p>
+            </div>
+            <div class="block">
+                <i class="fa-solid fa-2"></i><br>
+                <h3>View Your Result</h3>
+                <p>Get a detailed summary of your mental health assessment.</p>
+            </div>
+            <div class="block">
+                <i class="fa-solid fa-3"></i><br>
+                <h3>Recover</h3>
+                <p>Explore important tips and resources to support your recovery journey.</p>
+            </div>
+        </div>
+    </div>
+
+    <form class="question-container" id="mentalHealthForm" novalidate>
+        <div class="question">
+            <p>I feel downhearted or hopeless most of the time.</p>
+            Disagree
+            <label class="big">
+                <input type="radio" name="answer1" value="0" required>
+            </label>
+            <label class="small">
+                <input type="radio" name="answer1" value="1" required> 
+            </label>
+            <label class="neutral">
+                <input type="radio" name="answer1" value="2" required> 
+            </label>
+            <label class="small">
+                <input type="radio" name="answer1" value="3" required> 
+            </label>
+            <label class="big">
+                <input type="radio" name="answer1" value="4" required> 
+            </label>
+            Agree
+        </div>
+        <hr>
+        <div class="question">
+            <p>I have trouble in my sleeping schedule.</p>
+            Disagree
+            <label class="big">
+                <input type="radio" name="answer2" value="0" required>
+            </label>
+            <label class="small">
+                <input type="radio" name="answer2" value="1" required> 
+            </label>
+            <label class="neutral">
+                <input type="radio" name="answer2" value="2" required> 
+            </label>
+            <label class="small">
+                <input type="radio" name="answer2" value="3" required> 
+            </label>
+            <label class="big">
+                <input type="radio" name="answer2" value="4" required> 
+            </label>
+            Agree
+        </div>
+        <hr>
+        <div class="question">
+            <p>I feel for sleeping too much.</p>
+            Disagree
+            <label class="big">
+                <input type="radio" name="answer3" value="0" required>
+            </label>
+            <label class="small">
+                <input type="radio" name="answer3" value="1" required> 
+            </label>
+            <label class="neutral">
+                <input type="radio" name="answer3" value="2" required> 
+            </label>
+            <label class="small">
+                <input type="radio" name="answer3" value="3" required> 
+            </label>
+            <label class="big">
+                <input type="radio" name="answer3" value="4" required> 
+            </label>
+            Agree
+        </div>
+        <hr>
+        <div class="question">
+            <p>I feel tired or have little energy, even after a full night rest.</p>
+            Disagree
+            <label class="big">
+                <input type="radio" name="answer4" value="0" required>
+            </label>
+            <label class="small">
+                <input type="radio" name="answer4" value="1" required> 
+            </label>
+            <label class="neutral">
+                <input type="radio" name="answer4" value="2" required> 
+            </label>
+            <label class="small">
+                <input type="radio" name="answer4" value="3" required> 
+            </label>
+            <label class="big">
+                <input type="radio" name="answer4" value="4" required> 
+            </label>
+            Agree
+        </div>
+        <hr>
+        <div class="question">
+            <p>I have difficulty concentrating on tasks or making decisions.</p>
+            Disagree
+            <label class="big">
+                <input type="radio" name="answer5" value="0" required>
+            </label>
+            <label class="small">
+                <input type="radio" name="answer5" value="1" required> 
+            </label>
+            <label class="neutral">
+                <input type="radio" name="answer5" value="2" required> 
+            </label>
+            <label class="small">
+                <input type="radio" name="answer5" value="3" required> 
+            </label>
+            <label class="big">
+                <input type="radio" name="answer5" value="4" required> 
+            </label>
+            Agree
+        </div>
+        <hr>
+        <div class="question">
+            <p>I have noticed a significant decrease in my appetite.</p>
+            Disagree
+            <label class="big">
+                <input type="radio" name="answer6" value="0" required>
+            </label>
+            <label class="small">
+                <input type="radio" name="answer6" value="1" required> 
+            </label>
+            <label class="neutral">
+                <input type="radio" name="answer6" value="2" required> 
+            </label>
+            <label class="small">
+                <input type="radio" name="answer6" value="3" required> 
+            </label>
+            <label class="big">
+                <input type="radio" name="answer6" value="4" required> 
+            </label>
+            Agree
+        </div>
+        <hr>
+        <div class="question">
+            <p>I feel insecure with others, especially during events that I am not familiar of.</p>
+            Disagree
+            <label class="big">
+                <input type="radio" name="answer7" value="0" required>
+            </label>
+            <label class="small">
+                <input type="radio" name="answer7" value="1" required> 
+            </label>
+            <label class="neutral">
+                <input type="radio" name="answer7" value="2" required> 
+            </label>
+            <label class="small">
+                <input type="radio" name="answer7" value="3" required> 
+            </label>
+            <label class="big">
+                <input type="radio" name="answer7" value="4" required> 
+            </label>
+            Agree
+        </div>
+        <hr>
+        <div class="question">
+            <p>I found it difficult to relax.</p>
+            Disagree
+            <label class="big">
+                <input type="radio" name="answer8" value="0" required>
+            </label>
+            <label class="small">
+                <input type="radio" name="answer8" value="1" required> 
+            </label>
+            <label class="neutral">
+                <input type="radio" name="answer8" value="2" required> 
+            </label>
+            <label class="small">
+                <input type="radio" name="answer8" value="3" required> 
+            </label>
+            <label class="big">
+                <input type="radio" name="answer8" value="4" required> 
+            </label>
+            Agree
+        </div>
+        <hr>
+        <div class="question">
+            <p>I often feel worthless or that I am not good enough.</p>
+            Disagree
+            <label class="big">
+                <input type="radio" name="answer9" value="0" required>
+            </label>
+            <label class="small">
+                <input type="radio" name="answer9" value="1" required> 
+            </label>
+            <label class="neutral">
+                <input type="radio" name="answer9" value="2" required> 
+            </label>
+            <label class="small">
+                <input type="radio" name="answer9" value="3" required> 
+            </label>
+            <label class="big">
+                <input type="radio" name="answer9" value="4" required> 
+            </label>
+            Agree
+        </div>
+        <hr>
+        <div class="question">
+            <p>I sometimes think about death or wish that I was not alive.</p>
+            Disagree
+            <label class="big">
+                <input type="radio" name="answer10" value="0" required>
+            </label>
+            <label class="small">
+                <input type="radio" name="answer10" value="1" required> 
+            </label>
+            <label class="neutral">
+                <input type="radio" name="answer10" value="2" required> 
+            </label>
+            <label class="small">
+                <input type="radio" name="answer10" value="3" required> 
+            </label>
+            <label class="big">
+                <input type="radio" name="answer10" value="4" required> 
+            </label>
+            Agree
+        </div>
+        <button type="submit">VIEW RESULT <i class="fa-solid fa-angle-right"></i></button>
+    </form>
+
+    <div class="footer">
+        <div class="subscribe">
+            <form action="https://formspree.io/f/mvgornez" method="POST">
+            <p>Subscribe to Our Newsletter</p>
+            <input type="email" name="Email" placeholder="Enter your email address" required="required">
+            <button type="submit">Subscribe</button></form>
+        </div>
+        <div class="copyright">
+            <i class="fa-regular fa-copyright"></i> Copyright 2024 | Calm Corner | A JGJ Company
+        </div>
+    </div>
+
+    <script>
+        const barIcon = document.getElementById("bar-icon");
+        const dropdownMenu = document.getElementById("dropdown-menu");
+        window.addEventListener("resize", function() {
+            if (window.innerWidth > 800) {
+                dropdownMenu.style.display = "none";
+                barIcon.classList.remove("fa-times");  
+                barIcon.classList.add("fa-bars");
+                barIcon.classList.remove("open");
+            }
+        });
+        barIcon.addEventListener("click", function() {
+            if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
+                dropdownMenu.style.display = "block";
+                barIcon.classList.remove("fa-bars");
+                barIcon.classList.add("fa-times");
+                barIcon.classList.add("open");
+            } else {
+                dropdownMenu.style.display = "none";
+                barIcon.classList.add("fa-bars");
+                barIcon.classList.remove("fa-times");
+                barIcon.classList.remove("open");
+            }
+        });
+        document.querySelectorAll(".dropdown-btn").forEach(button => {
+            button.addEventListener("click", function() {
+                const answer = this.parentElement.nextElementSibling;
+                answer.classList.toggle("show");
+            });
+        });
+        document.querySelectorAll(".question-container input").forEach(input => {
+            input.addEventListener("change", function() {
+                const question = this.closest(".question");
+                question.querySelectorAll('label').forEach(label => {
+                    label.style.background = "none";
+                });
+                this.parentElement.style.background = "#E0E0E0";
+            });
+        });
+        document.getElementById("mentalHealthForm").addEventListener("submit", function(event) {
+            if (this.checkValidity()) {
+                event.preventDefault();
+                let score = 0;
+                const answers = this.querySelectorAll('input[type="radio"]:checked');
+                answers.forEach(answer => {
+                    score += parseInt(answer.value, 10);
+                });
+                window.location.href = `depression-result.html?score=${score}`;
+            } else {
+                event.preventDefault(); 
+                alert("Please answer all questions to view your result.");
+            }
+        });
+    </script>
+</body>
+</html>

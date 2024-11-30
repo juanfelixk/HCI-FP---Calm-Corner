@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Challenges</title>
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="challenge.css">
+    <script src="https://kit.fontawesome.com/e5693bed51.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="nav">
+        <img src="logo.png">
+        <b>Calm Corner</b>
+        <div class="nav-menu"><a href="index.html">Home</a></div>
+        <div class="nav-menu"><a href="#">Mood Tracker</a></div>
+        <div class="nav-menu"><a href="challenge.html">Weekly Challenges</a></div>
+        <div class="nav-menu"><a href="sharestory.html">Share a Story</a></div>
+        <i class="fa-solid fa-bars" id="bar-icon"></i>
+    </div>
+
+    <div class="dropdown" id="dropdown-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Mood Tracker</a></li>
+            <li><a href="challenge.html">Weekly Challenges</a></li>
+            <li><a href="sharestory.html">Share a Story</a></li>
+        </ul>
+    </div>
+
+    <div class="title">
+        <h1><b>Weekly Challenges</b></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="container-all">
+        <div class="filter">
+            <h3>Filter</h3>
+            <label>
+                <input type="checkbox" value="physical-activity" onclick="filterChallenge()">Physical Activity<br>
+            </label>
+            <label>
+                <input type="checkbox" value="networking" onclick="filterChallenge()">Networking<br>
+            </label>
+            <label>
+                <input type="checkbox" value="solo" onclick="filterChallenge()">Solo<br>
+            </label>
+        </div>
+
+        <div class="challenge-list">
+            <a class="challenge-card solo" onclick="openModal('modal1')">
+                <h2>Me Time</h2>
+                <p>
+                    Embrace solitude and reconnect with yourself by spending quality time alone.
+                </p>
+                <b><span class="learn-more">LEARN MORE</span></b>
+            </a>
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <div class="modal-text">
+                        <h2>Me Time</h2>
+                        <p>
+                            Spending time alone for mental health means intentionally setting aside time to be with yourself, 
+                            away from the noise of the outside world, in order to focus on your emotions. This time allows you 
+                            to disconnect from social pressures.
+                        </p>
+                        <h3>Goals</h3>
+                        <p>Reduce stress and anxiety through mindfulness practice, while encouraging you to cultivate awareness of your thoughts and emotions.</p>
+                        <h3>Benefits</h3>
+                        <p>Taking time alone to relax can restore your physical and mental energy improving overall health, calmness, and relaxation.</p>
+                        <h3>Steps to Complete Challenge</h3>
+                        <ol>
+                            <li>Plan your time.</li>
+                            <li>Choose an activity that you enjoy like reading a book, listening to musics, etc.</li>
+                            <li>Find a quiet and most comfortable place for you.</li>
+                            <li>Reflect on your experience after the activity, spend a few minutes thinking about how it felt.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <a class="challenge-card physical-activity" onclick="openModal('modal2')">
+                <h2>Energy Boost</h2>
+                <p>Rejuvenate your mind and body through engaging in fun physical activities.</p>
+                <b><span class="learn-more">LEARN MORE</span></b>
+            </a>
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal2')">&times;</span>
+                    <div class="modal-text">
+                        <h2>Energy Boost</h2>
+                        <p>
+                            Engage in physical activity for at least 30 minutes. 
+                            Whether it's going for a walk, or doing a workout, physical movement is encouraged to promote mental well-being.
+                        </p>
+                        <h3>Goals</h3>
+                        <p>Linking physical health to mental health through encouraging you to incorporate physical activity into your routine</p>
+                        <h3>Benefits</h3>
+                        <p>Strengthens your body to prevents mental fatigue and boosts energy levels which will improve mood.</p>
+                        <h3>Steps to Complete Challenge</h3>
+                        <ol>
+                            <li>Choose an activity that you enjoy the most like jogging, swimming, gym, etc.</li>
+                            <li>Set your time.</li>
+                            <li>Spend a little bit of time of warm up to avoid injury.</li>
+                            <li>You can perform the exercise for 30 minutes. Doing more is good but not necessary.</li>
+                            <li>Spend few minutes for cooling down</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <a class="challenge-card networking" onclick="openModal('modal3')">
+                <h2>Happy Bonds</h2>
+                <p>Strengthen bonds and uplift your spirits by spending time with loved ones.</p>
+                <b><span class="learn-more">LEARN MORE</span></b>
+            </a>
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal3')">&times;</span>
+                    <div class="modal-text">
+                        <h2>Happy Bonds</h2>
+                        <p>
+                            Reach out to a friend, family member, or colleague. 
+                            Make time to connect with someone, either virtually or in person, to combat loneliness and foster social support.
+                        </p>
+                        <h3>Goals</h3>
+                        <p>Strengthen relationships with friends and family to reduce isolation by encouraging social interactions.</p>
+                        <h3>Benefits</h3>
+                        <p>Increase happiness by building meaningful relationships to decrease feelings of loneliness and give emotional support.</p>
+                        <h3>Steps to Complete Challenge</h3>
+                        <ol>
+                            <li>Choose who you want to hang out with, for example decide friends that you want to hang out the most.</li>
+                            <li>Plan to meet up, decide on the time and place that you both agree.</li>
+                            <li>Start talking comfortably with your friends. You can share and listen to your friends' stories.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <a class="challenge-card networking" onclick="openModal('modal4')">
+                <h2>Spread Warmth</h2>
+                <p>Brighten someone's day with simple acts of kindness.</p>
+                <b><span class="learn-more">LEARN MORE</span></b>
+            </a>
+            <div id="modal4" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal4')">&times;</span>
+                    <div class="modal-text">
+                        <h2>Spread Warmth</h2>
+                        <p>
+                            Perform a simple act of kindness for someone else. 
+                            It could be anything from sending a kind message, helping a friend, etc. Share these positive acts to inspire others.
+                        </p>
+                        <h3>Goals</h3>
+                        <p>Reduce feelings of isolation by promoting positive social interactions while fostering a sense of community and connection by focusing on kindness.</p>
+                        <h3>Benefits</h3>
+                        <p>Boost personal happiness, reduce stress and build emotional strength through positive interactions with others.</p>
+                        <h3>Steps to Complete Challenge</h3>
+                        <ol>
+                            <li>Identify the target of an act of kindness like for a friend, stranger or family member.</li>
+                            <li>Set your free time and go to place that is familiar for you.</li>
+                            <li>Prepare for act of kindness, for example by giving a compliment, offering help, or sending a message.</li>
+                            <li>After you decide what to do, now it's time to perform the act of kindness.</li>
+                            <li>Reflect on the experience make conclusion what you get from this challenge.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <a class="challenge-card solo" onclick="openModal('modal5')">
+                <h2>Care Rituals</h2>
+                <p>Prioritize your well-being with relaxing personal self-care activities.</p>
+                <b><span class="learn-more">LEARN MORE</span></b>
+            </a>
+            <div id="modal5" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal5')">&times;</span>
+                    <div class="modal-text">
+                        <h2>Care Rituals</h2>
+                        <p>
+                            Dedicate time to personal self-care activities. 
+                            This could involve relaxing, enjoying a hobby, or anything that helps users to recharge.
+                        </p>
+                        <h3>Goals</h3>
+                        <p>Help you to release and focus on self-love and well-being, hence recharging yourself both mentally and physically.</p>
+                        <h3>Benefits</h3>
+                        <p>Improve emotional balance and mental clarity to reduce stress and prevents burnout.</p>
+                        <h3>Steps to Complete Challenge</h3>
+                        <ol>
+                            <li>Choose your self care activities that make you relax.</li>
+                            <li>Create a relaxing and comfortable environment.</li>
+                            <li>Engage fully to the activity.</li>
+                            <li>Reflect on the benefits upon the completion.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <a class="challenge-card solo" onclick="openModal('modal6')">
+                <h2>Inner Reflections</h2>
+                <p>Explore your thoughts and emotions to gain deeper self-awareness.</p>
+                <b><span class="learn-more">LEARN MORE</span></b>
+            </a>
+            <div id="modal6" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal6')">&times;</span>
+                    <div class="modal-text">
+                        <h2>Inner Reflections</h2>
+                        <p>
+                            Reflect on your emotions, thoughts, and actions throughout the week. 
+                            Complete a self-reflection exercise that asks questions like 
+                            "What made you feel good this week?" or "What did you learn about yourself?".
+                        </p>
+                        <h3>Goals</h3>
+                        <p>Encourage deeper emotional insight and understanding to foster personal growth.</p>
+                        <h3>Benefits</h3>
+                        <p>Increase emotional resilience by reflecting on experiences and strengthen self-understanding, contributing to better decision-making.</p>
+                        <h3>Steps to Complete Challenge</h3>
+                        <ol>
+                            <li>Choose a calm, quiet space where you won't be disturbed, such as your room or a park bench.</li>
+                            <li>Write your thoughts and emotions. Have a journal or a note-taking app ready to write down your thoughts.</li>
+                            <li>Identify your emotions and thoughts. You can ask yourself, “What emotions did I feel today, and why?” and “How did I react in stressful situations today?”.</li>
+                            <li>Set intentions to improve and fix your problems.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <a class="challenge-card networking" onclick="openModal('modal7')">
+                <h2>Gratitude Practice</h2>
+                <p>Cultivate a positive mindset by recognizing and appreciating the good in your life each day.</p>
+                <b><span class="learn-more">LEARN MORE</span></b>
+            </a>
+            <div id="modal7" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal7')">&times;</span>
+                    <div class="modal-text">
+                        <h2>Gratitude Practice</h2>
+                        <p>
+                            Practicing daily gratitude shifts your focus to the positive aspects of life, no matter how small. 
+                            By consistently acknowledging what you're thankful for, you nurture emotional well-being and build resilience. 
+                            This habit helps reduce stress and fosters a more optimistic perspective.
+                        </p>
+                        <h3>Goals</h3>
+                        <p>Cultivate a positive mindset by acknowledging the good things in life.</p>
+                        <h3>Benefits</h3>
+                        <p>Improve mental health, boost happiness, and strengthen relationships with others.</p>
+                        <h3>Steps to Complete Challenge</h3>
+                        <ol>
+                            <li>Set a specific time each day, decide when you will practice gratitude.</li>
+                            <li>List things you're grateful for, write down three specific things you're thankful for that day.</li>
+                            <li>Reflect on the positivity, pause for a moment after writing to feel the emotions of gratitude and let them uplift your mood.</li>
+                            <li>Make this a habit by practicing gratitude every day for a week. Use reminders if necessary.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <a class="challenge-card physical-activity" onclick="openModal('modal8')">
+                <h2>Space Purification</h2>
+                <p>Revitalize your environment by decluttering to enhance clarity and focus.</p>
+                <b><span class="learn-more">LEARN MORE</span></b>
+            </a>
+            <div id="modal8" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal8')">&times;</span>
+                    <div class="modal-text">
+                        <h2>Space Purification</h2>
+                        <p>
+                            A clutter-free space promotes mental clarity and peace, offering a sense of order and tranquility. 
+                            By organizing your surroundings, you eliminate distractions and create an environment conducive to productivity. 
+                            This act not only refreshes your physical space but also clears your mind, allowing you to think more clearly and creatively.
+                        </p>
+                        <h3>Goals</h3>
+                        <p>Reduce stress and improve focus by organizing your physical environment.</p>
+                        <h3>Benefits</h3>
+                        <p>Improve productivity and mood, hence reducing overall stress levels.</p>
+                        <h3>Steps to Complete Challenge</h3>
+                        <ol>
+                            <li>Choose a small area to declutter, start with a manageable space like your desk, closet, or a single drawer.</li>
+                            <li>Set a timer, allocate a specific amount of time, such as 20-30 minutes, to avoid feeling overwhelmed.</li>
+                            <li>Prepare trash bags, storage bins, or labels to help you sort items.</li>
+                            <li>For each item, ask, "Do I really need this?".</li>
+                            <li>Immediately take out the trash or pack items to donate.</li>
+                            <li>Take a moment to appreciate your tidy space and note how it makes you feel.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <a class="challenge-card solo" onclick="openModal('modal9')">
+                <h2>Knowledge Expansion</h2>
+                <p>Stimulate your mind by embracing new learning experiences and skills.</p>
+                <b><span class="learn-more">LEARN MORE</span></b>
+            </a>
+            <div id="modal9" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal9')">&times;</span>
+                    <div class="modal-text">
+                        <h2>Knowledge Expansion</h2>
+                        <p>
+                            Engaging in continuous learning challenges your intellect and promotes personal growth. 
+                            Whether acquiring new knowledge or honing a skill, it enhances your adaptability and self-confidence. 
+                            Learning keeps your mind active and broadens your perspectives, providing you with a sense of accomplishment and self-improvement.
+                        </p>
+                        <h3>Goals</h3>
+                        <p>Stimulate your mind and boost confidence by acquiring a new skill or knowledge.</p>
+                        <h3>Benefits</h3>
+                        <p>Improve confidence and brain functionaility to relieve stress.</p>
+                        <h3>Steps to Complete Challenge</h3>
+                        <ol>
+                            <li>Pick a skill or topic that excites you, such as cooking a new recipe, learning a few phrases in a foreign language, or trying basic coding.</li>
+                            <li>Use YouTube tutorials, online courses, or books to guide you.</li>
+                            <li>Schedule time daily or weekly to work on this skill. For instance, "I'll spend 30 minutes practicing every evening."</li>
+                            <li>Teach someone else what you've learned or showcase your new skill to reinforce it.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="subscribe">
+            <form action="https://formspree.io/f/mvgornez" method="POST">
+            <p>Subscribe to Our Newsletter</p>
+            <input type="email" name="Email" placeholder="Enter your email address" required="required">
+            <button type="submit">Subscribe</button></form>
+        </div>
+        <div class="copyright">
+            <i class="fa-regular fa-copyright"></i> Copyright 2024 | Calm Corner | A JGJ Company
+        </div>
+    </div>
+
+    <script>
+        const barIcon = document.getElementById("bar-icon");
+        const dropdownMenu = document.getElementById("dropdown-menu");
+        window.addEventListener("resize", function() {
+            if (window.innerWidth > 800) {
+                dropdownMenu.style.display = "none";
+                barIcon.classList.remove("fa-times");  
+                barIcon.classList.add("fa-bars");
+                barIcon.classList.remove("open");
+            }
+        });
+        barIcon.addEventListener("click", function() {
+            if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
+                dropdownMenu.style.display = "block";
+                barIcon.classList.remove("fa-bars");
+                barIcon.classList.add("fa-times");
+                barIcon.classList.add("open");
+            } else {
+                dropdownMenu.style.display = "none";
+                barIcon.classList.add("fa-bars");
+                barIcon.classList.remove("fa-times");
+                barIcon.classList.remove("open");
+            }
+        });
+        document.querySelectorAll(".dropdown-btn").forEach(button => {
+            button.addEventListener("click", function() {
+                const answer = this.parentElement.nextElementSibling;
+                answer.classList.toggle("show");
+            });
+        });
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.body.style.overflow = "hidden";
+            document.addEventListener("keydown", function escListener(event) {
+                if (event.key === "Escape") {
+                    closeModal(modalId);
+                    document.removeEventListener("keydown", escListener); 
+                }
+            });
+        };
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto";
+        };
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const challenge = urlParams.get("challenge");
+
+            if (challenge === "me-time") {
+                openModal("modal1");
+            } else if (challenge === "energy-boost") {
+                openModal("modal2");
+            } else if (challenge === "happy-bonds") {
+                openModal("modal3");
+            } else if (challenge === "spread-warmth") {
+                openModal("modal4");
+            } else if (challenge === "care-rituals") {
+                openModal("modal5");
+            } else if (challenge === "inner-reflections") {
+                openModal("modal6");
+            }
+        };
+        function filterChallenge() {
+            let checkedValues = [];
+            let checkboxes = document.querySelectorAll(".filter input:checked");
+            checkboxes.forEach(function(checkbox) {
+                checkedValues.push(checkbox.value);
+            });
+            let challengeCards = document.querySelectorAll(".challenge-card");
+            challengeCards.forEach(function(card) {
+                var cardClasses = card.classList;
+                var isVisible = checkedValues.some(function(value) {
+                    return cardClasses.contains(value);
+                });
+                if (checkedValues.length === 0 || isVisible) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

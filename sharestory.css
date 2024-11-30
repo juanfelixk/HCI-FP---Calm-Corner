@@ -188,10 +188,10 @@ body a{
     height: 40px;
     font-family: 'Montserrat';
     cursor: pointer;
+    transition: .3s ease;
 }
 .form button:hover{
     background-color: #2C3E50;
-    transition: .3s ease;
 }
 .form input::placeholder{
     visibility: hidden;
@@ -257,10 +257,10 @@ body a{
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
+    transition: .3s ease;
 }
 .footer button:hover{
     background-color: #2C3E50;
-    transition: .3s ease;
 }
 .copyright{
     text-align: right;

@@ -1,0 +1,311 @@
+body{
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+}
+button{
+    font-family: 'Montserrat';
+}
+body a{
+    text-decoration: none;
+    color: inherit;
+}
+.nav{
+    width: 100%;
+    background-color: #F0F0F0;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    color: #2C3E50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.nav img{
+    width: 40px;
+    padding: 1% 10px 1% 20px;
+}
+.nav-menu:first-of-type{
+    margin-left: auto;
+}
+.nav-menu{
+    padding: 0 1% 0 1%;
+    float: right;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease;
+}
+.nav-menu:hover{
+    background-color: #E0E0E0;
+}
+.nav i{
+    display: none;
+    transition: transform .5s ease;
+    cursor: pointer;
+}
+.nav i.open{
+    transform: rotate(90deg);
+}
+.dropdown{
+    display: none;
+}
+.title{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E3F9FF;
+    padding: 30px 50px 40px 50px;
+    margin-top: 100px;
+    border-radius: 0 40px 40px 40px;
+}
+.result-title{
+    color: #2A4D69;
+    font-size: 40px;
+    font-weight: 800;
+    margin: 40px 0;
+}
+.title p{
+    text-align: justify;
+    line-height: 150%;
+}
+.send-result-form{
+    text-align: right;
+}
+.send-result-form input{
+    padding: 12px;
+    width: 250px;
+    font-family: "Montserrat";
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #2A4D69;
+}
+.send-result-form button{
+    background-color: #4B7D99;
+    color: #FAFAFA;
+    border: none;
+    border-radius: 25px;
+    width: 130px;
+    height: 40px;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    transition: .3s ease;
+}
+.send-result-form button:hover{
+    background-color: #2C3E50;
+}
+.learn-more{
+    color: #2A4D69;
+    margin-top: 100px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+.learn-more a{
+    background-color: #4B7D99;
+    color: #FAFAFA;
+    border-radius: 30px;
+    padding: 15px 40px;
+    line-height: 430%;
+    cursor: pointer;
+    transition: .3s ease;
+    font-weight: 800;
+}
+.learn-more a:hover{
+    background-color: #2C3E50;
+}
+.desc{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E0FFEB;
+    padding: 30px 50px 40px 50px;
+    margin-top: 100px;
+    border-radius: 40px 0 40px 40px;
+    text-align: justify;
+}
+.desc h2{
+    color: #2E5D45;
+    text-align: right;
+}
+.medication{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F5F5F5;
+    padding: 30px 50px 40px 50px;
+    margin-top: 50px;
+    border-radius: 40px 0 40px 40px;
+    text-align: justify;
+}
+.medication h2{
+    text-align: right;
+}
+.medication h3{
+    margin-top: 60px;
+}
+.support{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E3F9FF;
+    padding: 30px 50px;
+    margin-top: 50px;
+    border-radius: 40px 40px 40px 40px;
+    text-align: center;
+}
+.support h3{
+    color: #2A4D69;
+}
+.support a:hover, .modal-text a:hover{
+    text-decoration: underline;
+}
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 2; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-content{
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 20px 20px 30px 20px;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+}
+.modal-text{
+    width: 80%;
+    margin: auto;
+}
+.modal-text p{
+    margin-top: 50px;
+}
+.close{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.close:hover, .close:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.footer{
+    background-color: #F0F0F0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    padding: 10px 40px 40px 40px;
+    display: flex;
+}
+.footer input{
+    padding: 10px;
+    width: 250px;
+    font-family: "Montserrat";
+}
+.footer button{
+    background-color: #4B7D99;
+    color: #FAFAFA;
+    border: none;
+    border-radius: 25px;
+    width: 130px;
+    height: 40px;
+    font-family: 'Montserrat';
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.footer button:hover{
+    background-color: #2C3E50;
+}
+.copyright{
+    text-align: right;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+@media screen and (max-width: 800px) {
+    .nav-menu{
+        display: none;
+    }
+    .nav i{
+        display: block;
+        margin-left: auto;
+        margin-right: 3%;
+    }
+    .dropdown{
+        width: 100%;
+    }
+    .dropdown ul{
+        list-style: none;
+        background-color: #F0F0F0;
+        margin-top: 0;
+        padding: 10px 0 20px 0;
+    }
+    .dropdown ul li{
+        padding: 15px 0 15px 30px;
+        transition: .3s ease;
+    }
+    .dropdown ul li:hover{
+        background-color: #E0E0E0;
+    }
+    .title{
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 0;
+        margin-top: 0;
+    }
+    .learn-more{
+        width: 100%;
+        text-align: center;
+    }
+    .desc{
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 0;
+    }
+    .medication{
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 0;
+        margin-top: 0;
+        background-color: #FFF;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .footer{
+        display: block;
+    }
+    .copyright{
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 508px) {
+    .subscribe button{
+        display: block;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 450px) {
+    .learn-more a{
+        font-size: 12px;
+        line-height: 500%;
+    }
+    .title input{
+        width: 70%;
+    }
+}

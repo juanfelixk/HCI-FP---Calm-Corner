@@ -86,10 +86,10 @@ body a{
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
+    transition: .3s ease;
 }
 .test-type button:hover{
     background-color: #2C3E50;
-    transition: .3s ease;
 }
 .challenge{
     width: 80%;
@@ -161,10 +161,10 @@ body a{
     margin-top: 20px;
     cursor: pointer;
     text-align: center;
+    transition: .3s ease;
 }
 .challenge .learn-more:hover{
     background-color: #1A352C;
-    transition: .3s ease;
 }
 .why-us{
     margin-top: 90px;
@@ -306,10 +306,10 @@ body a{
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
+    transition: .3s ease;
 }
 .footer button:hover{
     background-color: #2C3E50;
-    transition: .3s ease;
 }
 .copyright{
     text-align: right;

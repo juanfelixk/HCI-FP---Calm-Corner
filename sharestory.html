@@ -15,7 +15,7 @@
         <b>Calm Corner</b>
         <div class="nav-menu"><a href="index.html">Home</a></div>
         <div class="nav-menu"><a href="#">Mood Tracker</a></div>
-        <div class="nav-menu"><a href="#">Weekly Challenges</a></div>
+        <div class="nav-menu"><a href="challenge.html">Weekly Challenges</a></div>
         <div class="nav-menu"><a href="sharestory.html">Share a Story</a></div>
         <i class="fa-solid fa-bars" id="bar-icon"></i>
     </div>
@@ -24,37 +24,10 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="#">Mood Tracker</a></li>
-            <li><a href="#">Weekly Challenges</a></li>
-            <li><a href="#">Share a Story</a></li>
+            <li><a href="challenge.html">Weekly Challenges</a></li>
+            <li><a href="sharestory.html">Share a Story</a></li>
         </ul>
     </div>
-
-    <script>
-        const barIcon = document.getElementById("bar-icon");
-        const dropdownMenu = document.getElementById("dropdown-menu");
-        window.addEventListener("resize", function() {
-            if (window.innerWidth > 800) {
-                dropdownMenu.style.display = "none";
-                barIcon.classList.remove("fa-times");  
-                barIcon.classList.add("fa-bars");
-                barIcon.classList.remove("open");
-            }
-        });
-
-        barIcon.addEventListener("click", function() {
-            if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
-                dropdownMenu.style.display = "block";
-                barIcon.classList.remove("fa-bars");
-                barIcon.classList.add("fa-times");
-                barIcon.classList.add("open");
-            } else {
-                dropdownMenu.style.display = "none";
-                barIcon.classList.add("fa-bars");
-                barIcon.classList.remove("fa-times");
-                barIcon.classList.remove("open");
-            }
-        });
-    </script>
 
     <div class="title">
         <h1><b>Share A Story</b></h1>
@@ -98,15 +71,6 @@
             sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
         <hr>
     </div>
-
-    <script>
-        document.querySelectorAll('.dropdown-btn').forEach(button => {
-            button.addEventListener('click', function () {
-                const answer = this.parentElement.nextElementSibling;
-                answer.classList.toggle('show');
-            });
-        });
-    </script>
 
     <div class="form">
         <h3><b>Let others hear you.</b></h3>
@@ -168,6 +132,38 @@
             <i class="fa-regular fa-copyright"></i> Copyright 2024 | Calm Corner | A JGJ Company
         </div>
     </div>
+
+    <script>
+        const barIcon = document.getElementById("bar-icon");
+        const dropdownMenu = document.getElementById("dropdown-menu");
+        window.addEventListener("resize", function() {
+            if (window.innerWidth > 800) {
+                dropdownMenu.style.display = "none";
+                barIcon.classList.remove("fa-times");  
+                barIcon.classList.add("fa-bars");
+                barIcon.classList.remove("open");
+            }
+        });
+        barIcon.addEventListener("click", function() {
+            if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
+                dropdownMenu.style.display = "block";
+                barIcon.classList.remove("fa-bars");
+                barIcon.classList.add("fa-times");
+                barIcon.classList.add("open");
+            } else {
+                dropdownMenu.style.display = "none";
+                barIcon.classList.add("fa-bars");
+                barIcon.classList.remove("fa-times");
+                barIcon.classList.remove("open");
+            }
+        });
+        document.querySelectorAll(".dropdown-btn").forEach(button => {
+            button.addEventListener("click", function() {
+                const answer = this.parentElement.nextElementSibling;
+                answer.classList.toggle("show");
+            });
+        });
+    </script>
 
 </body>
 </html>

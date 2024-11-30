@@ -15,7 +15,7 @@
         <b>Calm Corner</b>
         <div class="nav-menu"><a href="index.html">Home</a></div>
         <div class="nav-menu"><a href="#">Mood Tracker</a></div>
-        <div class="nav-menu"><a href="#">Weekly Challenges</a></div>
+        <div class="nav-menu"><a href="challenge.html">Weekly Challenges</a></div>
         <div class="nav-menu"><a href="sharestory.html">Share a Story</a></div>
         <i class="fa-solid fa-bars" id="bar-icon"></i>
     </div>
@@ -24,37 +24,10 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="#">Mood Tracker</a></li>
-            <li><a href="#">Weekly Challenges</a></li>
+            <li><a href="challenge.html">Weekly Challenges</a></li>
             <li><a href="sharestory.html">Share a Story</a></li>
         </ul>
     </div>
-
-    <script>
-        const barIcon = document.getElementById("bar-icon");
-        const dropdownMenu = document.getElementById("dropdown-menu");
-        window.addEventListener("resize", function() {
-            if (window.innerWidth > 800) {
-                dropdownMenu.style.display = "none";
-                barIcon.classList.remove("fa-times");  
-                barIcon.classList.add("fa-bars");
-                barIcon.classList.remove("open");
-            }
-        });
-
-        barIcon.addEventListener("click", function() {
-            if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
-                dropdownMenu.style.display = "block";
-                barIcon.classList.remove("fa-bars");
-                barIcon.classList.add("fa-times");
-                barIcon.classList.add("open");
-            } else {
-                dropdownMenu.style.display = "none";
-                barIcon.classList.add("fa-bars");
-                barIcon.classList.remove("fa-times");
-                barIcon.classList.remove("open");
-            }
-        });
-    </script>
 
     <div class="title">
         <h1>Mental Health Screening</h1>
@@ -68,54 +41,48 @@
 
     <div class="test-type">
         <h2><b>Take Our Free Mental Health Test</b></h2>
-        <a href="#"><button><b>DEPRESSION TEST</b></button></a>
-        <a href="#"><button><b>ANXIETY TEST</b></button></a>
-        <a href="#"><button><b>ADHD TEST</b></button></a>
+        <a href="depression-test.html"><button><b>DEPRESSION TEST</b></button></a>
+        <a href="anxiety-test.html"><button><b>ANXIETY TEST</b></button></a>
+        <a href="adhd-test.html"><button><b>ADHD TEST</b></button></a>
     </div>
 
     <div class="challenge">
         <h1>Explore Our Weekly Challenges</h1>
         <h3>Find a challenge that supports your mental healing</h3>
         <div class="left">
-            <a href="#"><button>
+            <a href="challenge.html?challenge=me-time"><button>
                 <i class="fa-solid fa-arrow-right"></i>
-                <div class="challenge-name">Challenge Name</div>
-                <p class="challenge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua.</p>
+                <div class="challenge-name">Me Time</div>
+                <p class="challenge-desc">Embrace solitude and reconnect with yourself by spending quality time alone.</p>
             </button></a>
-            <a href="#"><button>
+            <a href="challenge.html?challenge=energy-boost"><button>
                 <i class="fa-solid fa-arrow-right"></i>
-                <div class="challenge-name">Challenge Name</div>
-                <p class="challenge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua.</p>
+                <div class="challenge-name">Energy Boost</div>
+                <p class="challenge-desc">Rejuvenate your mind and body through engaging in fun physical activities.</p>
             </button></a>
-            <a href="#"><button>
+            <a href="challenge.html?challenge=happy-bonds"><button>
                 <i class="fa-solid fa-arrow-right"></i>
-                <div class="challenge-name">Challenge Name</div>
-                <p class="challenge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua.</p>
+                <div class="challenge-name">Happy Bonds</div>
+                <p class="challenge-desc">Strengthen bonds and uplift your spirits by spending time with loved ones.</p>
             </button></a><br>
         </div>
         <div class="center">
-            <a href="#"><button>
+            <a href="challenge.html?challenge=spread-warmth"><button>
                 <i class="fa-solid fa-arrow-right"></i>
-                <div class="challenge-name">Challenge Name</div>
-                <p class="challenge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua.</p>
+                <div class="challenge-name">Spread Warmth</div>
+                <p class="challenge-desc">Brighten someone's day with simple acts of kindness which can make a world of difference.</p>
             </button></a>
-            <a href="#"><button>
+            <a href="challenge.html?challenge=inner-reflections"><button>
                 <i class="fa-solid fa-arrow-right"></i>
-                <div class="challenge-name">Challenge Name</div>
-                <p class="challenge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua.</p>
+                <div class="challenge-name">Inner Reflections</div>
+                <p class="challenge-desc">Explore your thoughts and emotions to gain deeper self-awareness.</p>
             </button></a>
-            <a href="#"><button>
+            <a href="challenge.html?challenge=care-rituals"><button>
                 <i class="fa-solid fa-arrow-right"></i>
-                <div class="challenge-name">Challenge Name</div>
-                <p class="challenge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua.</p>
+                <div class="challenge-name">Care Rituals</div>
+                <p class="challenge-desc">Prioritize your well-being with relaxing personal self-care activities.</p>
             </button></a><br>
-            <button class="learn-more">Explore more challenges</button>
+            <a href="challenge.html"><button class="learn-more">Explore more challenges</button></a>
         </div>
     </div>
 
@@ -198,6 +165,32 @@
             <i class="fa-regular fa-copyright"></i> Copyright 2024 | Calm Corner | A JGJ Company
         </div>
     </div>
+
+    <script>
+        const barIcon = document.getElementById("bar-icon");
+        const dropdownMenu = document.getElementById("dropdown-menu");
+        window.addEventListener("resize", function() {
+            if (window.innerWidth > 800) {
+                dropdownMenu.style.display = "none";
+                barIcon.classList.remove("fa-times");  
+                barIcon.classList.add("fa-bars");
+                barIcon.classList.remove("open");
+            }
+        });
+        barIcon.addEventListener("click", function() {
+            if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
+                dropdownMenu.style.display = "block";
+                barIcon.classList.remove("fa-bars");
+                barIcon.classList.add("fa-times");
+                barIcon.classList.add("open");
+            } else {
+                dropdownMenu.style.display = "none";
+                barIcon.classList.add("fa-bars");
+                barIcon.classList.remove("fa-times");
+                barIcon.classList.remove("open");
+            }
+        });
+    </script>
 
 </body>
 </html>

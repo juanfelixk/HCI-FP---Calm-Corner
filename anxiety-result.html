@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="result.css">
+    <script src="https://kit.fontawesome.com/e5693bed51.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="nav">
+        <img src="logo.png">
+        <b>Calm Corner</b>
+        <div class="nav-menu"><a href="index.html">Home</a></div>
+        <div class="nav-menu"><a href="#">Mood Tracker</a></div>
+        <div class="nav-menu"><a href="challenge.html">Weekly Challenges</a></div>
+        <div class="nav-menu"><a href="sharestory.html">Share a Story</a></div>
+        <i class="fa-solid fa-bars" id="bar-icon"></i>
+    </div>
+
+    <div class="dropdown" id="dropdown-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Mood Tracker</a></li>
+            <li><a href="challenge.html">Weekly Challenges</a></li>
+            <li><a href="sharestory.html">Share a Story</a></li>
+        </ul>
+    </div>
+
+    <div class="title">
+        <h2>Your Result for Anxiety Test</h2>
+        <div class="result-title" id="resultName">???</div>
+        <p>
+            Based on the result of your screening, you are diagnosed with <span id="resultDiagnosis">???</span> symptoms of anxiety. 
+            Please note that this is not a final diagnosis. A further consultation with your doctor or therapist is encouraged.
+        </p>
+        <form id="sendResult" class="send-result-form">
+            <input type="email" id="userEmail" placeholder="Enter your email address" required><br>
+            <input type="hidden" id="emailResult">
+            <button type="submit">Send Results</button>
+        </form>
+    </div>
+
+    <div class="learn-more">
+        <h1>What to do next?</h1>
+        <a class="learn-more-btn" href="#desc">Learn more about anxiety</a><br>
+        <a class="learn-more-btn" href="#medication">Find a suitable medication</a><br>
+        <a class="learn-more-btn" href="#support">Find local support</a><br>
+        <a class="learn-more-btn" onclick="openModal('modal')">I don't want to live, but I don't want to die</a>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal')">&times;</span>
+            <div class="modal-text">
+                <h2>Crisis Support and Resources</h2>
+                <p>
+                    Talk to Someone You Trust<br><br>
+                    Whether it's a friend, family member, or a professional, sharing your thoughts and 
+                    feelings with them will reduce your stress and can help relieve the emotional weight you may be carrying.
+                </p>
+                <p>
+                    Seek for Professional Help<br><br>
+                    Therapists or doctors will be helpful to provide support, resources, and therapy to help you work through your emotions.
+                </p>
+                <p>
+                    Need Immediate Help?
+                    <a onclick="closeModal('modal')" href="#support">Find local support here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="desc" id="desc">
+        <h2>About Anxiety</h2>
+        <p>
+            Anxiety is a common mental health condition characterized by excessive worry, fear, or apprehension. 
+            It can manifest in various forms, such as generalized anxiety disorder or social anxiety disorder, and often leads to physical symptoms like rapid heartbeat and fatigue. 
+            While anxiety is a normal response to stress, persistent anxiety can interfere with daily life and may require treatment through therapy, medication, or lifestyle changes.
+        </p>
+    </div>
+    
+    <div class="medication" id="medication">
+        <h2>Find Your Medication</h2>
+        <p>
+            Going through anxiety is not easy, but finding the right medication for anxiety (Anxiolytics) can be a vital step toward recovery. 
+            With various options available, it's essential to understand what works best for you.
+        </p>
+        <h3>Benzodiazepines</h3>
+        <p>
+            Benzodiazepines are effective for short-term relief of anxiety, but they can be habit-forming if used long-term.<br>
+            Examples:
+            <ul>
+                <li>Diazepam (Valium)</li>
+                <li>Lorazepam (Ativan)</li>
+                <li>Alprazolam (Xanax)</li>
+            </ul>
+            Common side effects:
+            <ul>
+                <li>Sedation</li>
+                <li>Coordination issues</li>
+                <li>Drowsiness</li>
+                <li>Dizziness</li>
+                <li>Dependence (if used long-term)</li>
+            </ul>
+        </p>
+        <h3>Buspirone</h3>
+        <p>
+            This is a non-benzodiazepine medication used specifically for generalized anxiety disorder.<br>
+            Examples:
+            <ul>
+                <li>BuSpar</li>
+                <li>Buspirone HCl</li>
+            </ul>
+            Common side effects:
+            <ul>
+                <li>Nausea</li>
+                <li>Headache</li>
+                <li>Dizziness</li>
+                <li>Mild anxiety or restlessness initially</li>
+            </ul>
+        </p>
+        <h3>Antidepressants</h3>
+        <p>
+            Some antidepressants, such as Selective Serotonin Reuptake Inhibitors (SSRIs) or Serotonin-Norepinephrine Reuptake Inhibitors (SNRIs), are also used to treat anxiety disorders.<br>
+            Examples:
+            <ul>
+                <li>Fluoxetine (Prozac)</li>
+                <li>Sertraline (Zoloft)</li>
+                <li>Venlafaxine (Effexor)</li>
+            </ul>
+            Common side effects:
+            <ul>
+                <li>Drowsiness</li>
+                <li>Insomnia and drowsiness</li>
+                <li>Nausea</li>
+                <li>Dizziness</li>
+                <li>Headache</li>
+            </ul>
+        </p>
+        <h3>IMPORTANT</h3>
+        <ul>
+            <li>Combining medications should be closely monitored by a healthcare provider to avoid harmful interactions.</li>
+            <li>Some medications may require dosage adjustments or changes if side effects are problematic.</li>
+            <li>Treatment is often most effective when combined with psychotherapy (e.g., Cognitive Behavioral Therapy - CBT), as well as lifestyle changes that support mental health.</li>
+        </ul>
+    </div>
+    
+    <div class="support" id="support">
+        <h3>Find Local Support</h3>
+        <p>Emergency Contact Number: <a href="tel:112">112</a></p>
+        <p>Or reach us through <a href="mailto:calmcorner@gmail.com">calmcorner@gmail.com</a></p>
+    </div>
+
+    <div class="footer">
+        <div class="subscribe">
+            <form action="https://formspree.io/f/mvgornez" method="POST">
+            <p>Subscribe to Our Newsletter</p>
+            <input type="email" name="Email" placeholder="Enter your email address" required="required">
+            <button type="submit">Subscribe</button></form>
+        </div>
+        <div class="copyright">
+            <i class="fa-regular fa-copyright"></i> Copyright 2024 | Calm Corner | A JGJ Company
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        const barIcon = document.getElementById("bar-icon");
+        const dropdownMenu = document.getElementById("dropdown-menu");
+        window.addEventListener("resize", function() {
+            if (window.innerWidth > 800) {
+                dropdownMenu.style.display = "none";
+                barIcon.classList.remove("fa-times");  
+                barIcon.classList.add("fa-bars");
+                barIcon.classList.remove("open");
+            }
+        });
+
+        barIcon.addEventListener("click", function() {
+            if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
+                dropdownMenu.style.display = "block";
+                barIcon.classList.remove("fa-bars");
+                barIcon.classList.add("fa-times");
+                barIcon.classList.add("open");
+            } else {
+                dropdownMenu.style.display = "none";
+                barIcon.classList.add("fa-bars");
+                barIcon.classList.remove("fa-times");
+                barIcon.classList.remove("open");
+            }
+        });
+
+        document.querySelectorAll(".dropdown-btn").forEach(button => {
+            button.addEventListener("click", function() {
+                const answer = this.parentElement.nextElementSibling;
+                answer.classList.toggle("show");
+            });
+        });
+
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+        const score = getQueryParam('score');        
+        const resultName = document.getElementById("resultName");
+        const resultDiagnosis = document.getElementById("resultDiagnosis");
+        if (score >= 0 && score <= 5) {
+            resultName.innerText = "Minimal Anxiety";
+            resultDiagnosis.innerText = "few to no";
+        } else if (score >= 6 && score <= 14) {
+            resultName.innerText = "Mild Anxiety";
+            resultDiagnosis.innerText = "mild";
+        } else if (score >= 15 && score <= 23) {
+            resultName.innerText = "Moderate Anxiety";
+            resultDiagnosis.innerText = "moderate";
+        } else if (score >= 24 && score <= 33) {
+            resultName.innerText = "Moderately Severe Anxiety";
+            resultDiagnosis.innerText = "moderately severe";
+        } else if (score >= 34 && score <= 40) {
+            resultName.innerText = "Severe Anxiety";
+            resultDiagnosis.innerText = "severe";
+        } else {
+            resultName.innerText = "INVALID";
+            resultDiagnosis.innerText = "INVALID";
+        };
+
+        document.querySelectorAll(".learn-more-btn").forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute("href");
+                const targetElement = document.querySelector(targetId);
+                targetElement.scrollIntoView({behavior:"smooth"});
+            });
+        });
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.body.style.overflow = "hidden";
+            document.addEventListener("keydown", function escListener(event) {
+                if (event.key === "Escape") {
+                    closeModal(modalId);
+                    document.removeEventListener("keydown", escListener); 
+                }
+            });
+        };
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto";
+        };
+
+        (function(){
+            emailjs.init("DSKLpqNRo9PPax88p");
+        })();
+        document.getElementById("sendResult").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const userEmail = document.getElementById("userEmail").value;
+            const resultDiagnosisText = resultDiagnosis.innerText;
+            const resultNameText = resultName.innerText;
+            const resultMessage = `Your result is: ${resultNameText} with ${resultDiagnosisText} symptoms of anxiety.`;
+            document.getElementById("emailResult").value = resultMessage;
+            emailjs.send("service_3ef61en", "template_vwdpy7o", {
+                user_email: userEmail,
+                message: resultMessage
+            })
+            .then(function(response) {
+                console.log("SUCCESS!", response.status, response.text);
+                alert("Results sent to your email!");
+                document.getElementById("userEmail").value = "";
+            }, function(error) {
+                console.log("FAILED!", error);
+                alert("Failed to send results. Please try again.");
+            });
+        });
+    </script>
+</body>
+</html>
