@@ -161,6 +161,9 @@ body a{
     background-color: #FAFAFA;
     cursor: pointer;
 }
+.challenge p{
+    color: #000;
+}
 .challenge-name{
     font-size: 30px;
     font-weight: 800;
