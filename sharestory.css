@@ -193,18 +193,15 @@ body a{
 }
 .form input:focus,
 .form textarea:focus,
-.form textarea:valid{
+.form textarea:valid,
+.form input.filled{
     border: 2px solid #2A4D69;
     color: #2A4D69;
 }
 .form input:focus + .label,
-.form textarea:focus + .label{
-    color: #2A4D69;
-    transform: translate(-10px, -34px) scale(0.9);
-    padding: 0 5px;
-    border-radius: 5px;
-}
-.form textarea:valid + .label {
+.form textarea:focus + .label,
+.form textarea:valid + .label,
+.form input.filled + .label{
     color: #2A4D69;
     transform: translate(-10px, -34px) scale(0.9);
     padding: 0 5px;

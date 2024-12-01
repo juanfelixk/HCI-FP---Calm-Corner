@@ -170,6 +170,15 @@
                 answer.classList.toggle("show");
             });
         });
+        document.querySelectorAll('.entryarea input, .entryarea textarea').forEach(input => {
+            input.addEventListener('input', function() {
+                if (this.value.trim() !== '') {
+                    this.classList.add('filled');
+                } else {
+                    this.classList.remove('filled');
+                }
+            });
+        });
     </script>
 
 </body>
