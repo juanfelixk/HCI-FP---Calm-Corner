@@ -13,17 +13,23 @@
     <div class="nav">
         <img src="logo.png">
         <b>Calm Corner</b>
-        <div class="nav-menu"><a href="index.html">Home</a></div>
-        <div class="nav-menu"><a href="#">Mood Tracker</a></div>
-        <div class="nav-menu"><a href="challenge.html">Weekly Challenges</a></div>
-        <div class="nav-menu"><a href="sharestory.html">Share a Story</a></div>
+        <a href="index.html" class="nav-menu">Home</a>
+        <div class="nav-menu" id="removeDropdown">
+            Take Screening
+            <div class="dropdown-content">
+                <a href="depression-test.html">Depression Test</a>
+                <a href="anxiety-test.html">Anxiety Test</a>
+                <a href="adhd-test.html">ADHD Test</a>
+            </div>
+        </div>
+        <a href="challenge.html" class="nav-menu">Weekly Challenges</a>
+        <a href="sharestory.html" class="nav-menu">Share a Story</a>
         <i class="fa-solid fa-bars" id="bar-icon"></i>
     </div>
 
     <div class="dropdown" id="dropdown-menu">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Mood Tracker</a></li>
             <li><a href="challenge.html">Weekly Challenges</a></li>
             <li><a href="sharestory.html">Share a Story</a></li>
         </ul>
@@ -32,11 +38,11 @@
     <div class="title">
         <h1>Mental Health Screening</h1>
         <h2>"Where Calm Meets Clarity"</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>
+            At Calm Corner, we believe in creating a supportive environment for mental well-being. 
+            Our mission is to provide resources and tools that empower individuals to embrace their mental health journey. 
+            We understand that life can be challenging, and we are here to offer guidance and support.
+        </p>
     </div>
 
     <div class="test-type">
@@ -88,56 +94,62 @@
 
     <div class="why-us">
         <h2>Why Calm Corner?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>
+            Calm Corner is dedicated to providing a safe space where individuals can explore their mental health without judgment. 
+            We offer a variety of resources, including articles, tools, and community support, to help you navigate your journey. 
+            Our approach is holistic, focusing on both mental and emotional well-being.
+        </p>
     </div>
 
     <div class="container-for-two">
         <div class="about">
             <img src="logo.png">
             <h2><b>About Calm Corner</b></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>
+                Calm Corner is dedicated to creating a supportive community focused on mental well-being. 
+                We believe that everyone deserves a safe space to explore their mental health and access valuable resources. 
+                Our platform offers informative articles, engaging challenges, and mental health screenings designed to empower individuals on their wellness journeys.<br><br>
+                Our team consists of mental health professionals and advocates who are passionate about breaking the stigma surrounding mental health. 
+                We provide tools and activities that promote self-care, resilience, and connection. 
+                Join us in fostering understanding and compassion as we work together to create a brighter future for mental health awareness.
+            </p>
         </div>
         <div class="share-story">
             <h2>Share Your Story</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>
+                Your story matters! At Calm Corner, we invite you to share your experiences with mental health, whether they involve challenges, triumphs, or moments of growth. 
+                By sharing, you can inspire others who may be facing similar struggles and help normalize conversations about mental health.<br><br>
+                This is a safe space for you to express yourself, and you can choose to remain anonymous if you prefer. Simply click on “Share Your Story Here” to contribute. 
+                Let's break the silence together and empower one another through our stories. Your voice can make a difference!
+            </p>
             <div class="center-link"><a href="sharestory.html" class="test"><b>SHARE YOUR STORY HERE</b></a></div>
         </div>
     </div>
 
     <div class="explore-story">
-        <h2>Explore Similar Stories</h2>
+        <h2>Explore Relatable Stories</h2>
         <div class="slider">
-            <div class="slide active">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+            <div class="slide active">My journey with mental health has been tough but transformative. 
+                Struggling with anxiety, I realized I needed help and reached out to a friend who encouraged me to see a therapist. 
+                This changed my life. Sharing my experiences revealed that many others face similar challenges. 
+                Writing became my outlet, helping me connect with others. Now, I celebrate my progress and embrace the importance of asking for help, reminding us that we can navigate mental health together.<br><br>
                 - Writer 1 -
             </div>
-            <div class="slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+            <div class="slide">My experience with grief has been profound and eye-opening. After losing a close family member, 
+                I felt an overwhelming sense of emptiness and confusion. It took time for me to accept my feelings, 
+                but I eventually sought support from friends who helped me navigate my emotions. 
+                Their presence made a significant difference in my healing process. As I began to share my story, I realized the importance of community in times of loss. 
+                I started writing about my experiences, which not only helped me process my grief but also resonated with others facing similar situations. 
+                Now, I cherish the memories of my loved one and advocate for open conversations about grief, reminding others that it's okay to seek support and share their feelings.<br><br>
                 - Writer 2 -
             </div>
-            <div class="slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+            <div class="slide">My battle with self-esteem has been a long and challenging journey. 
+                Growing up, I often compared myself to others, leading to feelings of inadequacy. 
+                It wasn't until I began journaling that I started to recognize my worth and the unique qualities I possess. 
+                Writing allowed me to reflect on my achievements and embrace my individuality.
+                As I shared my journey on social media, I found a supportive community that encouraged self-love and acceptance. 
+                Their stories inspired me to continue my path toward confidence. 
+                Now, I celebrate my progress and advocate for self-acceptance, reminding others that everyone has their own unique journey and that it's essential to embrace who we are.<br><br>
                 - Writer 3 -
             </div>
             <button class="prev" onclick="moveSlide(-1)"><i class="fa-solid fa-angle-left"></i></button>
@@ -189,6 +201,27 @@
                 barIcon.classList.remove("fa-times");
                 barIcon.classList.remove("open");
             }
+        });
+        
+        const takeScreeningMenu = document.getElementById("removeDropdown");
+        const dropdownContent = takeScreeningMenu.querySelector(".dropdown-content");
+        let timeoutId;
+        takeScreeningMenu.addEventListener("mouseenter", function() {
+            clearTimeout(timeoutId);
+            dropdownContent.style.display = "block";
+        });
+        takeScreeningMenu.addEventListener("mouseleave", function() {
+            timeoutId = setTimeout(() => {
+                dropdownContent.style.display = "none";
+            }, 300);
+        });
+        dropdownContent.addEventListener("mouseenter", function() {
+            clearTimeout(timeoutId);
+        });
+        dropdownContent.addEventListener("mouseleave", function() {
+            timeoutId = setTimeout(() => {
+                dropdownContent.style.display = "none";
+            }, 300);
         });
     </script>
 

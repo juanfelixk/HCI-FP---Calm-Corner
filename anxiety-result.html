@@ -13,17 +13,23 @@
     <div class="nav">
         <img src="logo.png">
         <b>Calm Corner</b>
-        <div class="nav-menu"><a href="index.html">Home</a></div>
-        <div class="nav-menu"><a href="#">Mood Tracker</a></div>
-        <div class="nav-menu"><a href="challenge.html">Weekly Challenges</a></div>
-        <div class="nav-menu"><a href="sharestory.html">Share a Story</a></div>
+        <a href="index.html" class="nav-menu">Home</a>
+        <div class="nav-menu" id="removeDropdown">
+            Take Screening
+            <div class="dropdown-content">
+                <a href="depression-test.html">Depression Test</a>
+                <a href="anxiety-test.html">Anxiety Test</a>
+                <a href="adhd-test.html">ADHD Test</a>
+            </div>
+        </div>
+        <a href="challenge.html" class="nav-menu">Weekly Challenges</a>
+        <a href="sharestory.html" class="nav-menu">Share a Story</a>
         <i class="fa-solid fa-bars" id="bar-icon"></i>
     </div>
 
     <div class="dropdown" id="dropdown-menu">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Mood Tracker</a></li>
             <li><a href="challenge.html">Weekly Challenges</a></li>
             <li><a href="sharestory.html">Share a Story</a></li>
         </ul>
