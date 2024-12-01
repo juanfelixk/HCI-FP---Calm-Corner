@@ -375,7 +375,8 @@
             });
         });
         function openModal(modalId) {
-            document.getElementById(modalId).style.display = "block";
+            const modal = document.getElementById(modalId);
+            modal.style.display = "block";
             document.body.style.overflow = "hidden";
             document.addEventListener("keydown", function escListener(event) {
                 if (event.key === "Escape") {
@@ -383,6 +384,11 @@
                     document.removeEventListener("keydown", escListener); 
                 }
             });
+            modal.onclick = function(event) {
+                if (event.target === modal) {
+                    closeModal(modalId);
+                }
+            };
         };
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = "none";
