@@ -103,7 +103,7 @@
 
     <div class="container-for-two">
         <div class="about">
-            <img src="logo.png">
+            <img src="logo.png" alt="Our Logo">
             <h2><b>About Calm Corner</b></h2>
             <p>
                 Calm Corner is dedicated to creating a supportive community focused on mental well-being. 
@@ -201,27 +201,6 @@
                 barIcon.classList.remove("fa-times");
                 barIcon.classList.remove("open");
             }
-        });
-        
-        const takeScreeningMenu = document.getElementById("removeDropdown");
-        const dropdownContent = takeScreeningMenu.querySelector(".dropdown-content");
-        let timeoutId;
-        takeScreeningMenu.addEventListener("mouseenter", function() {
-            clearTimeout(timeoutId);
-            dropdownContent.style.display = "block";
-        });
-        takeScreeningMenu.addEventListener("mouseleave", function() {
-            timeoutId = setTimeout(() => {
-                dropdownContent.style.display = "none";
-            }, 300);
-        });
-        dropdownContent.addEventListener("mouseenter", function() {
-            clearTimeout(timeoutId);
-        });
-        dropdownContent.addEventListener("mouseleave", function() {
-            timeoutId = setTimeout(() => {
-                dropdownContent.style.display = "none";
-            }, 300);
         });
     </script>
 
