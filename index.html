@@ -8,12 +8,15 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/e5693bed51.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <div class="nav">
-        <img src="logo.png">
-        <b>Calm Corner</b>
-        <a href="index.html" class="nav-menu">Home</a>
+        <a class="logo" href="index.html">
+            <img src="logo.png">
+            <b>Calm Corner</b>
+        </a>
         <div class="nav-menu" id="removeDropdown">
             Take Screening
             <div class="dropdown-content">
@@ -29,9 +32,14 @@
 
     <div class="dropdown" id="dropdown-menu">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="challenge.html">Weekly Challenges</a></li>
-            <li><a href="sharestory.html">Share a Story</a></li>
+            <li class="dropdown-mobile">Take Screening</li>
+            <ul class="dropdown-content-mobile">
+                <a href="depression-test.html"><li><i class="fa-solid fa-angle-right"></i>Depression Test</li></a>
+                <a href="anxiety-test.html"><li><i class="fa-solid fa-angle-right"></i>Anxiety Test</li></a>
+                <a href="adhd-test.html"><li><i class="fa-solid fa-angle-right"></i>ADHD Test</li></a>
+            </ul>
+            <a href="challenge.html"><li>Weekly Challenges</li></a>
+            <a href="sharestory.html"><li>Share a Story</li></a>
         </ul>
     </div>
 
@@ -45,14 +53,14 @@
         </p>
     </div>
 
-    <div class="test-type">
+    <div class="test-type" id="mobileAnimation">
         <h2><b>Take Our Free Mental Health Test</b></h2>
         <a href="depression-test.html"><button><b>DEPRESSION TEST</b></button></a>
         <a href="anxiety-test.html"><button><b>ANXIETY TEST</b></button></a>
         <a href="adhd-test.html"><button><b>ADHD TEST</b></button></a>
     </div>
 
-    <div class="challenge">
+    <div class="challenge" data-aos="fade-up" data-aos-duration="1000">
         <h1>Explore Our Weekly Challenges</h1>
         <h3>Find a challenge that supports your mental healing</h3>
         <div class="left">
@@ -92,7 +100,7 @@
         </div>
     </div>
 
-    <div class="why-us">
+    <div class="why-us" data-aos="fade-up" data-aos-duration="1000">
         <h2>Why Calm Corner?</h2>
         <p>
             Calm Corner is dedicated to providing a safe space where individuals can explore their mental health without judgment. 
@@ -102,19 +110,17 @@
     </div>
 
     <div class="container-for-two">
-        <div class="about">
+        <div class="about" data-aos="fade-up" data-aos-duration="1000">
             <img src="logo.png" alt="Our Logo">
             <h2><b>About Calm Corner</b></h2>
             <p>
                 Calm Corner is dedicated to creating a supportive community focused on mental well-being. 
                 We believe that everyone deserves a safe space to explore their mental health and access valuable resources. 
-                Our platform offers informative articles, engaging challenges, and mental health screenings designed to empower individuals on their wellness journeys.<br><br>
-                Our team consists of mental health professionals and advocates who are passionate about breaking the stigma surrounding mental health. 
-                We provide tools and activities that promote self-care, resilience, and connection. 
+                Our platform offers informative articles, engaging challenges, and mental health screenings designed to empower individuals on their wellness journeys.
                 Join us in fostering understanding and compassion as we work together to create a brighter future for mental health awareness.
             </p>
         </div>
-        <div class="share-story">
+        <div class="share-story" data-aos="fade-up" data-aos-duration="1000">
             <h2>Share Your Story</h2>
             <p>
                 Your story matters! At Calm Corner, we invite you to share your experiences with mental health, whether they involve challenges, triumphs, or moments of growth. 
@@ -126,7 +132,7 @@
         </div>
     </div>
 
-    <div class="explore-story">
+    <div class="explore-story" data-aos="fade-up" data-aos-duration="1000">
         <h2>Explore Relatable Stories</h2>
         <div class="slider">
             <div class="slide active">My journey with mental health has been tough but transformative. 
@@ -155,15 +161,6 @@
             <button class="prev" onclick="moveSlide(-1)"><i class="fa-solid fa-angle-left"></i></button>
             <button class="next" onclick="moveSlide(1)"><i class="fa-solid fa-angle-right"></i></button>
         </div>
-        <script>
-            let slideIndex = 0;
-            function moveSlide(step) {
-                const slides = document.querySelectorAll('.slide');
-                slides[slideIndex].classList.remove('active');
-                slideIndex = (slideIndex + step + slides.length) % slides.length;
-                slides[slideIndex].classList.add('active');
-            }
-        </script>
     </div>
 
     <div class="footer">
@@ -179,30 +176,23 @@
     </div>
 
     <script>
-        const barIcon = document.getElementById("bar-icon");
-        const dropdownMenu = document.getElementById("dropdown-menu");
-        window.addEventListener("resize", function() {
-            if (window.innerWidth > 800) {
-                dropdownMenu.style.display = "none";
-                barIcon.classList.remove("fa-times");  
-                barIcon.classList.add("fa-bars");
-                barIcon.classList.remove("open");
+        let slideIndex = 0;
+        function moveSlide(step) {
+            const slides = document.querySelectorAll('.slide');
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (slideIndex + step + slides.length) % slides.length;
+            slides[slideIndex].classList.add('active');
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            const mobileAnimation = document.getElementById("mobileAnimation");
+            if (window.innerHeight <= 725) {
+                mobileAnimation.setAttribute("data-aos", "fade-up");
+                mobileAnimation.setAttribute("data-aos-duration", "1000");
             }
-        });
-        barIcon.addEventListener("click", function() {
-            if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
-                dropdownMenu.style.display = "block";
-                barIcon.classList.remove("fa-bars");
-                barIcon.classList.add("fa-times");
-                barIcon.classList.add("open");
-            } else {
-                dropdownMenu.style.display = "none";
-                barIcon.classList.add("fa-bars");
-                barIcon.classList.remove("fa-times");
-                barIcon.classList.remove("open");
-            }
+            AOS.init();
         });
     </script>
+    <script src="navbar.js"></script>
 
 </body>
 </html>

@@ -21,26 +21,35 @@ body a{
 }
 .nav img{
     width: 40px;
-    padding: 1% 10px 1% 20px;
+    margin-right: 10px;
+}
+.nav .logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease;
+    padding: 0 1% 0 1%;
+    margin-right: auto;
 }
 .nav-menu:first-of-type{
     margin-left: auto;
 }
 .nav-menu{
     padding: 0 1% 0 1%;
-    float: right;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: .3s ease;
 }
-.nav-menu:hover{
+.nav-menu:hover, .nav .logo:hover{
     background-color: #E0E0E0;
+    cursor: pointer;
 }
 .nav i{
     display: none;
-    transition: transform .5s ease;
+    transition: .5s ease;
     cursor: pointer;
 }
 .nav i.open{
@@ -86,6 +95,22 @@ body a{
 .dropdown{
     display: none;
 }
+.dropdown-content-mobile{
+    display: none;
+}
+.dropdown-content-mobile li{
+    padding: 12px 16px;
+    margin-left: 20px;
+}
+.dropdown-content-mobile li:hover{
+    background-color: #E0E0E0;
+}
+.dropdown-content-mobile.show{
+    display: block;
+}
+.dropdown-content-mobile i{
+    margin-right: 10px;
+}
 .title{
     width: 80%;
     margin-left: auto;
@@ -121,7 +146,7 @@ body a{
 }
 .challenge-card{
     box-sizing: border-box;
-    flex: 1 1 calc(33.33% - 20px);
+    width: calc(33.33% - 20px);
     text-align: left;
     background-color: #E0FFEB;
     padding: 30px 20px;
@@ -248,6 +273,9 @@ body a{
     }
 }
 @media screen and (max-width: 800px) {
+    .nav .logo{
+        padding: 0 20px;
+    }
     .nav-menu{
         display: none;
     }

@@ -8,12 +8,15 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="result.css">
     <script src="https://kit.fontawesome.com/e5693bed51.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <div class="nav">
-        <img src="logo.png">
-        <b>Calm Corner</b>
-        <a href="index.html" class="nav-menu">Home</a>
+        <a class="logo" href="index.html">
+            <img src="logo.png">
+            <b>Calm Corner</b>
+        </a>
         <div class="nav-menu" id="removeDropdown">
             Take Screening
             <div class="dropdown-content">
@@ -29,9 +32,14 @@
 
     <div class="dropdown" id="dropdown-menu">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="challenge.html">Weekly Challenges</a></li>
-            <li><a href="sharestory.html">Share a Story</a></li>
+            <li class="dropdown-mobile">Take Screening</li>
+            <ul class="dropdown-content-mobile">
+                <a href="depression-test.html"><li><i class="fa-solid fa-angle-right"></i>Depression Test</li></a>
+                <a href="anxiety-test.html"><li><i class="fa-solid fa-angle-right"></i>Anxiety Test</li></a>
+                <a href="adhd-test.html"><li><i class="fa-solid fa-angle-right"></i>ADHD Test</li></a>
+            </ul>
+            <a href="challenge.html"><li>Weekly Challenges</li></a>
+            <a href="sharestory.html"><li>Share a Story</li></a>
         </ul>
     </div>
 
@@ -49,7 +57,7 @@
         </form>
     </div>
 
-    <div class="learn-more">
+    <div class="learn-more" id="mobileAnimation">
         <h1>What to do next?</h1>
         <a class="learn-more-btn" href="#desc">Learn more about ADHD</a><br>
         <a class="learn-more-btn" href="#medication">Find a suitable medication</a><br>
@@ -79,7 +87,7 @@
         </div>
     </div>
 
-    <div class="desc" id="desc">
+    <div class="desc" id="desc" data-aos="fade-up" data-aos-duration="1000">
         <h2>About ADHD</h2>
         <p>
             Attention Deficit/Hyperactivity Disorder (ADHD) is a neurodevelopmental disorder characterized by persistent patterns of inattention, hyperactivity, 
@@ -88,7 +96,7 @@
         </p>
     </div>
     
-    <div class="medication" id="medication">
+    <div class="medication" id="medication" data-aos="fade-up" data-aos-duration="1000">
         <h2>Find Your Medication</h2>
         <p>
             Going through ADHD is not easy, but finding the right medication for anxiety (Anxiolytics) can be a vital step toward recovery. 
@@ -136,7 +144,7 @@
         </ul>
     </div>
     
-    <div class="support" id="support">
+    <div class="support" id="support" data-aos="fade-up" data-aos-duration="1000">
         <h3>Find Local Support</h3>
         <p>Emergency Contact Number: <a href="tel:112">112</a></p>
         <p>Or reach us through <a href="mailto:calmcorner@gmail.com">calmcorner@gmail.com</a></p>
@@ -155,39 +163,9 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="result.js"></script>
+    <script src="navbar.js"></script>
     <script>
-        const barIcon = document.getElementById("bar-icon");
-        const dropdownMenu = document.getElementById("dropdown-menu");
-        window.addEventListener("resize", function() {
-            if (window.innerWidth > 800) {
-                dropdownMenu.style.display = "none";
-                barIcon.classList.remove("fa-times");  
-                barIcon.classList.add("fa-bars");
-                barIcon.classList.remove("open");
-            }
-        });
-
-        barIcon.addEventListener("click", function() {
-            if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
-                dropdownMenu.style.display = "block";
-                barIcon.classList.remove("fa-bars");
-                barIcon.classList.add("fa-times");
-                barIcon.classList.add("open");
-            } else {
-                dropdownMenu.style.display = "none";
-                barIcon.classList.add("fa-bars");
-                barIcon.classList.remove("fa-times");
-                barIcon.classList.remove("open");
-            }
-        });
-
-        document.querySelectorAll(".dropdown-btn").forEach(button => {
-            button.addEventListener("click", function() {
-                const answer = this.parentElement.nextElementSibling;
-                answer.classList.toggle("show");
-            });
-        });
-
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
@@ -215,34 +193,10 @@
             resultDiagnosis.innerText = "INVALID";
         };
 
-        document.querySelectorAll(".learn-more-btn").forEach(link => {
-            link.addEventListener("click", function(event) {
-                event.preventDefault();
-                const targetId = this.getAttribute("href");
-                const targetElement = document.querySelector(targetId);
-                targetElement.scrollIntoView({behavior:"smooth"});
-            });
-        });
-
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = "block";
-            document.body.style.overflow = "hidden";
-            document.addEventListener("keydown", function escListener(event) {
-                if (event.key === "Escape") {
-                    closeModal(modalId);
-                    document.removeEventListener("keydown", escListener); 
-                }
-            });
-        };
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
-            document.body.style.overflow = "auto";
-        };
-
         (function(){
             emailjs.init("DSKLpqNRo9PPax88p");
         })();
-        document.getElementById("sendResult").addEventListener("submit", function(event) {
+            document.getElementById("sendResult").addEventListener("submit", function(event) {
             event.preventDefault();
             const userEmail = document.getElementById("userEmail").value;
             const resultDiagnosisText = resultDiagnosis.innerText;

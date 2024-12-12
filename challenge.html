@@ -11,9 +11,10 @@
 </head>
 <body>
     <div class="nav">
-        <img src="logo.png">
-        <b>Calm Corner</b>
-        <a href="index.html" class="nav-menu">Home</a>
+        <a class="logo" href="index.html">
+            <img src="logo.png">
+            <b>Calm Corner</b>
+        </a>
         <div class="nav-menu" id="removeDropdown">
             Take Screening
             <div class="dropdown-content">
@@ -29,9 +30,14 @@
 
     <div class="dropdown" id="dropdown-menu">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="challenge.html">Weekly Challenges</a></li>
-            <li><a href="sharestory.html">Share a Story</a></li>
+            <li class="dropdown-mobile">Take Screening</li>
+            <ul class="dropdown-content-mobile">
+                <a href="depression-test.html"><li><i class="fa-solid fa-angle-right"></i>Depression Test</li></a>
+                <a href="anxiety-test.html"><li><i class="fa-solid fa-angle-right"></i>Anxiety Test</li></a>
+                <a href="adhd-test.html"><li><i class="fa-solid fa-angle-right"></i>ADHD Test</li></a>
+            </ul>
+            <a href="challenge.html"><li>Weekly Challenges</li></a>
+            <a href="sharestory.html"><li>Share a Story</li></a>
         </ul>
     </div>
 
@@ -345,35 +351,6 @@
     </div>
 
     <script>
-        const barIcon = document.getElementById("bar-icon");
-        const dropdownMenu = document.getElementById("dropdown-menu");
-        window.addEventListener("resize", function() {
-            if (window.innerWidth > 800) {
-                dropdownMenu.style.display = "none";
-                barIcon.classList.remove("fa-times");  
-                barIcon.classList.add("fa-bars");
-                barIcon.classList.remove("open");
-            }
-        });
-        barIcon.addEventListener("click", function() {
-            if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
-                dropdownMenu.style.display = "block";
-                barIcon.classList.remove("fa-bars");
-                barIcon.classList.add("fa-times");
-                barIcon.classList.add("open");
-            } else {
-                dropdownMenu.style.display = "none";
-                barIcon.classList.add("fa-bars");
-                barIcon.classList.remove("fa-times");
-                barIcon.classList.remove("open");
-            }
-        });
-        document.querySelectorAll(".dropdown-btn").forEach(button => {
-            button.addEventListener("click", function() {
-                const answer = this.parentElement.nextElementSibling;
-                answer.classList.toggle("show");
-            });
-        });
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
             modal.style.display = "block";
@@ -432,6 +409,7 @@
             });
         }
     </script>
+    <script src="navbar.js"></script>
 
 </body>
 </html>
