@@ -1,3 +1,4 @@
+// remove navigation bar menus for mobile screen and add a dropdown button
 const barIcon = document.getElementById("bar-icon");
 const dropdownMenu = document.getElementById("dropdown-menu");
 window.addEventListener("resize", function() {
@@ -9,6 +10,7 @@ window.addEventListener("resize", function() {
     }
 });
 
+// add animation and display the dropdown
 barIcon.addEventListener("click", function() {
     if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
         dropdownMenu.style.display = "block";
@@ -23,13 +25,7 @@ barIcon.addEventListener("click", function() {
     }
 });
 
-document.querySelectorAll(".dropdown-btn").forEach(button => {
-    button.addEventListener("click", function() {
-        const answer = this.parentElement.nextElementSibling;
-        answer.classList.toggle("show");
-    });
-});
-
+// nested dropdown for screening options for mobile screen
 const dropdownBtn = document.querySelector(".dropdown-mobile");
 const dropdownContent = dropdownBtn.nextElementSibling;
 dropdownBtn.addEventListener("click", function() {

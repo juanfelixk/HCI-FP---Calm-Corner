@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/e5693bed51.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <div class="nav">
         <a class="logo" href="index.html">
             <img src="logo.png">
@@ -28,6 +29,7 @@
         <i class="fa-solid fa-bars" id="bar-icon"></i>
     </div>
 
+    <!-- Navigation Bar with Dropdown for Mobile -->
     <div class="dropdown" id="dropdown-menu">
         <ul>
             <li class="dropdown-mobile">Take Screening</li>
@@ -41,6 +43,7 @@
         </ul>
     </div>
 
+    <!-- Test Name -->
     <div class="title">
         <span class="main-title">ADHD Test</span>
         <div class="block-container">
@@ -62,6 +65,7 @@
         </div>
     </div>
 
+    <!-- Questions -->
     <form class="question-container" id="mentalHealthForm" novalidate>
         <div class="question">
             <p>I often find it difficult to focus on a task, even when it is important.</p>
@@ -315,6 +319,7 @@
         <button type="submit">VIEW RESULT <i class="fa-solid fa-angle-right"></i></button>
     </form>
 
+    <!-- Footer -->
     <div class="footer">
         <div class="subscribe">
             <form action="https://formspree.io/f/mvgornez" method="POST">
@@ -328,6 +333,7 @@
     </div>
 
     <script>
+        // modify the url dynamically to include the score from the screening
         document.getElementById("mentalHealthForm").addEventListener("submit", function(event) {
             if (this.checkValidity()) {
                 event.preventDefault();

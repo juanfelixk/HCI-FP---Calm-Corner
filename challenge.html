@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/e5693bed51.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <div class="nav">
         <a class="logo" href="index.html">
             <img src="logo.png">
@@ -28,6 +29,7 @@
         <i class="fa-solid fa-bars" id="bar-icon"></i>
     </div>
 
+    <!-- Navigation Bar with Dropdown for Mobile-->
     <div class="dropdown" id="dropdown-menu">
         <ul>
             <li class="dropdown-mobile">Take Screening</li>
@@ -41,6 +43,7 @@
         </ul>
     </div>
 
+    <!-- Title -->
     <div class="title">
         <h1><b>Weekly Challenges</b></h1>
         <p>
@@ -51,6 +54,7 @@
     </div>
 
     <div class="container-all">
+        <!-- Filter -->
         <div class="filter">
             <h3>Filter</h3>
             <label>
@@ -64,6 +68,7 @@
             </label>
         </div>
 
+        <!-- Challenge Cards -->
         <div class="challenge-list">
             <a class="challenge-card solo" onclick="openModal('modal1')">
                 <h2>Me Time</h2>
@@ -338,6 +343,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <div class="footer">
         <div class="subscribe">
             <form action="https://formspree.io/f/mvgornez" method="POST">
@@ -351,30 +357,34 @@
     </div>
 
     <script>
+        // function to open modal
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
             modal.style.display = "block";
             document.body.style.overflow = "hidden";
             document.addEventListener("keydown", function escListener(event) {
                 if (event.key === "Escape") {
-                    closeModal(modalId);
+                    closeModal(modalId); // close modal if esc key is pressed
                     document.removeEventListener("keydown", escListener); 
                 }
             });
             modal.onclick = function(event) {
                 if (event.target === modal) {
-                    closeModal(modalId);
+                    closeModal(modalId); // close modal if the user clicks outside the modal
                 }
             };
         };
+
+        // function to close modal
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = "none";
             document.body.style.overflow = "auto";
         };
+
+        // function to automatically open a modal when the page is loaded from clicking the link in index.html
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
             const challenge = urlParams.get("challenge");
-
             if (challenge === "me-time") {
                 openModal("modal1");
             } else if (challenge === "energy-boost") {
@@ -389,6 +399,8 @@
                 openModal("modal6");
             }
         };
+
+        // filter function using checkbox
         function filterChallenge() {
             let checkedValues = [];
             let checkboxes = document.querySelectorAll(".filter input:checked");

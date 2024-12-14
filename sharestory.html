@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/e5693bed51.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <div class="nav">
         <a class="logo" href="index.html">
             <img src="logo.png">
@@ -28,6 +29,7 @@
         <i class="fa-solid fa-bars" id="bar-icon"></i>
     </div>
 
+    <!-- Navigation Bar with Dropdown for Mobile -->
     <div class="dropdown" id="dropdown-menu">
         <ul>
             <li class="dropdown-mobile">Take Screening</li>
@@ -41,6 +43,7 @@
         </ul>
     </div>
 
+    <!-- Title -->
     <div class="title">
         <h1><b>Share A Story</b></h1>
         <p>
@@ -51,6 +54,7 @@
         </p>
     </div>
 
+    <!-- FAQ -->
     <div class="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="question">
@@ -85,6 +89,7 @@
         <hr>
     </div>
 
+    <!-- Share Story Form -->
     <div class="form">
         <h3><b>Let others hear you.</b></h3>
         <form action="https://formspree.io/f/xwpkbgnz" method="POST" id="storyForm">
@@ -108,6 +113,7 @@
         </form>
     </div>
 
+    <!-- Other Stories -->
     <div class="other-story">
         <h2>Feel Others'</h2>
         <div class="story-container"> 
@@ -134,6 +140,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <div class="footer">
         <div class="subscribe">
             <form action="https://formspree.io/f/mvgornez" method="POST">
@@ -147,6 +154,14 @@
     </div>
 
     <script>
+        // FAQ dropdown
+        document.querySelectorAll(".dropdown-btn").forEach(button => {
+            button.addEventListener("click", function() {
+                const answer = this.parentElement.nextElementSibling;
+                answer.classList.toggle("show");
+            });
+        });
+        // for form input field animation
         document.querySelectorAll('.entryarea input, .entryarea textarea').forEach(input => {
             input.addEventListener('input', function() {
                 if (this.value.trim() !== '') {

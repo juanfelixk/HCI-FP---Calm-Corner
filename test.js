@@ -1,3 +1,4 @@
+// animation to mark the option chosen by the user
 document.querySelectorAll(".question-container input").forEach(input => {
     input.addEventListener("change", function() {
         const question = this.closest(".question");

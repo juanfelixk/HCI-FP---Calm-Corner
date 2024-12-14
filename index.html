@@ -12,6 +12,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <div class="nav">
         <a class="logo" href="index.html">
             <img src="logo.png">
@@ -30,6 +31,7 @@
         <i class="fa-solid fa-bars" id="bar-icon"></i>
     </div>
 
+    <!-- Navigation Bar with Dropdown Menu for Mobile-->
     <div class="dropdown" id="dropdown-menu">
         <ul>
             <li class="dropdown-mobile">Take Screening</li>
@@ -43,6 +45,7 @@
         </ul>
     </div>
 
+    <!-- Main Title -->
     <div class="title">
         <h1>Mental Health Screening</h1>
         <h2>"Where Calm Meets Clarity"</h2>
@@ -53,6 +56,7 @@
         </p>
     </div>
 
+    <!-- Screening Choices -->
     <div class="test-type" id="mobileAnimation">
         <h2><b>Take Our Free Mental Health Test</b></h2>
         <a href="depression-test.html"><button><b>DEPRESSION TEST</b></button></a>
@@ -60,6 +64,7 @@
         <a href="adhd-test.html"><button><b>ADHD TEST</b></button></a>
     </div>
 
+    <!-- Weekly Challenges -->
     <div class="challenge" data-aos="fade-up" data-aos-duration="1000">
         <h1>Explore Our Weekly Challenges</h1>
         <h3>Find a challenge that supports your mental healing</h3>
@@ -100,6 +105,7 @@
         </div>
     </div>
 
+    <!-- About Calm Corner -->
     <div class="why-us" data-aos="fade-up" data-aos-duration="1000">
         <h2>Why Calm Corner?</h2>
         <p>
@@ -109,6 +115,7 @@
         </p>
     </div>
 
+    <!-- Description of Calm Corner and Share Story Feature -->
     <div class="container-for-two">
         <div class="about" data-aos="fade-up" data-aos-duration="1000">
             <img src="logo.png" alt="Our Logo">
@@ -132,6 +139,7 @@
         </div>
     </div>
 
+    <!-- Explore Other Stories -->
     <div class="explore-story" data-aos="fade-up" data-aos-duration="1000">
         <h2>Explore Relatable Stories</h2>
         <div class="slider">
@@ -163,6 +171,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <div class="footer">
         <div class="subscribe">
             <form action="https://formspree.io/f/mvgornez" method="POST">
@@ -179,17 +188,18 @@
         let slideIndex = 0;
         function moveSlide(step) {
             const slides = document.querySelectorAll('.slide');
-            slides[slideIndex].classList.remove('active');
-            slideIndex = (slideIndex + step + slides.length) % slides.length;
-            slides[slideIndex].classList.add('active');
+            slides[slideIndex].classList.remove('active'); // .active is removed to remove a slide
+            slideIndex = (slideIndex + step + slides.length) % slides.length; // ensure new slideIndex is within slides.length
+            slides[slideIndex].classList.add('active'); // .active is added to display a slide
         }
+        // only allow the animation to run for mobile screen with max height of 725 px
         document.addEventListener("DOMContentLoaded", function() {
             const mobileAnimation = document.getElementById("mobileAnimation");
             if (window.innerHeight <= 725) {
                 mobileAnimation.setAttribute("data-aos", "fade-up");
                 mobileAnimation.setAttribute("data-aos-duration", "1000");
             }
-            AOS.init();
+            AOS.init(); // Initialize AOS
         });
     </script>
     <script src="navbar.js"></script>

@@ -12,6 +12,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <div class="nav">
         <a class="logo" href="index.html">
             <img src="logo.png">
@@ -30,6 +31,7 @@
         <i class="fa-solid fa-bars" id="bar-icon"></i>
     </div>
 
+    <!-- Navgiation Bar with Dropdown for Mobile -->
     <div class="dropdown" id="dropdown-menu">
         <ul>
             <li class="dropdown-mobile">Take Screening</li>
@@ -43,6 +45,7 @@
         </ul>
     </div>
 
+    <!-- Test Result -->
     <div class="title">
         <h2>Your Result for Depression Test</h2>
         <div class="result-title" id="resultName">???</div>
@@ -57,6 +60,7 @@
         </form>
     </div>
 
+    <!-- Shortcuts -->
     <div class="learn-more" id="mobileAnimation">
         <h1>What to do next?</h1>
         <a class="learn-more-btn" href="#desc">Learn more about depression</a><br>
@@ -65,6 +69,7 @@
         <a class="learn-more-btn" onclick="openModal('modal')">I don't want to live, but I don't want to die</a>
     </div>
 
+    <!-- Suicide Prevention -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal')">&times;</span>
@@ -87,6 +92,7 @@
         </div>
     </div>
 
+    <!-- About Depression -->
     <div class="desc" id="desc" data-aos="fade-up" data-aos-duration="1000">
         <h2>About Depression</h2>
         <p>
@@ -96,6 +102,7 @@
         </p>
     </div>
     
+    <!-- Medication -->
     <div class="medication" id="medication" data-aos="fade-up" data-aos-duration="1000">
         <h2>Find Your Medication</h2>
         <p>
@@ -161,12 +168,14 @@
         </ul>
     </div>
     
+    <!-- Find Support -->
     <div class="support" id="support" data-aos="fade-up" data-aos-duration="1000">
         <h3>Find Local Support</h3>
         <p>Emergency Contact Number: <a href="tel:112">112</a></p>
         <p>Or reach us through <a href="mailto:calmcorner@gmail.com">calmcorner@gmail.com</a></p>
     </div>
 
+    <!-- Footer -->
     <div class="footer">
         <div class="subscribe">
             <form action="https://formspree.io/f/mvgornez" method="POST">
@@ -179,10 +188,11 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> <!-- For Emailing -->
     <script src="result.js"></script>
     <script src="navbar.js"></script>
     <script>
+        // function to dynamically change the result based on the score in the url
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
@@ -210,6 +220,7 @@
             resultDiagnosis.innerText = "INVALID";
         };
 
+        // function to send result email to user
         (function(){
             emailjs.init("DSKLpqNRo9PPax88p");
         })();
@@ -218,19 +229,19 @@
             const userEmail = document.getElementById("userEmail").value;
             const resultDiagnosisText = resultDiagnosis.innerText;
             const resultNameText = resultName.innerText;
-            const resultMessage = `Your result is: ${resultNameText} with ${resultDiagnosisText} symptoms of depression.`;
+            const resultMessage = `Your result is: ${resultNameText} with ${resultDiagnosisText} symptoms of depression.`; // result template
             document.getElementById("emailResult").value = resultMessage;
             emailjs.send("service_3ef61en", "template_vwdpy7o", {
                 user_email: userEmail,
                 message: resultMessage
             })
             .then(function(response) {
-                console.log("SUCCESS!", response.status, response.text);
-                alert("Results sent to your email!");
-                document.getElementById("userEmail").value = "";
+                console.log("SUCCESS!", response.status, response.text); // for testing
+                alert("Results sent to your email!"); // notify user
+                document.getElementById("userEmail").value = ""; // reset value
             }, function(error) {
-                console.log("FAILED!", error);
-                alert("Failed to send results. Please try again.");
+                console.log("FAILED!", error); // for testing
+                alert("Failed to send results. Please try again."); // notify user
             });
         });
     </script>

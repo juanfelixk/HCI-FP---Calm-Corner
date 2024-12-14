@@ -1,3 +1,4 @@
+// scroll into view with smnooth transition when link is clicked
 document.querySelectorAll(".learn-more-btn").forEach(link => {
     link.addEventListener("click", function(event) {
         event.preventDefault();
@@ -7,6 +8,7 @@ document.querySelectorAll(".learn-more-btn").forEach(link => {
     });
 });
 
+// function to open modal
 function openModal(modalId) {
     document.getElementById(modalId).style.display = "block";
     document.body.style.overflow = "hidden";
@@ -23,11 +25,13 @@ function openModal(modalId) {
     };
 };
 
+// function to close modal
 function closeModal(modalId) {
     document.getElementById(modalId).style.display = "none";
     document.body.style.overflow = "auto";
 };
 
+// only allow the animation to run for mobile screen with max height of 725 px
 document.addEventListener("DOMContentLoaded", function() {
     const mobileAnimation = document.getElementById("mobileAnimation");
     if (window.innerHeight <= 725) {
