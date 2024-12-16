@@ -27,3 +27,6 @@
   Corner Calm is particularly created to help those suffering from mental health issues, especially Gen Z from ages 12 to 22. The age of 12 is chosen as it is considered to be the common period of puberty, while the age of 22 is chosen as the ideal age before graduating from university. 
   As such, Corner Calm’s main focus is to address the mental health problems often found in students, thereby proposing a rational, relevant solution to their personal issues.
 </p>
+
+<h2>Demo Video Link</h2>
+<p>https://www.youtube.com/watch?v=j_9Rs0NrW5E</p>
